@@ -6,31 +6,36 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body>
-    <div id="main-page">
-        <h1>jellyfish quiz</h1>
-        <button id="begin-quiz">Begin Quiz</button>
-    </div>
-
-
-    <div id="quiz-page" style="display: none">
-        <img id="q-img" src="">
-        <h2 id="q-text"></h2>
-        <div id="q-choices">
-
+<body id="body">
+    <div id="all-container">
+        <div id="main-page" class="container" style="display: none">
+            <h1>jellyfish quiz</h1>
+            <p> quiz description </p>
+            <button id="begin-quiz">Begin Quiz</button>
+        </div>
+    
+    
+        <div id="quiz-page" class="container" style="display: none">
+            <h1 id="q-question"></h1>
+            <img id="q-img" src="">
+            <p id="q-text"></p>
+            <div id="q-choices">
+    
+            </div>
+    
+        </div>
+    
+    
+        <div id="results-page" class="container" style="display: none">
+            <h1>the end
+                
+            </h1>
         </div>
 
+        <div class="overlay" aria-hidden="true">
+
+        </div>
     </div>
-
-
-    <div id="results-page" style="display: none">
-        <h1>the end</h1>
-    </div>
-
-
-
-
-
     <script src="scripts.js"></script>
 </body>
 </html>

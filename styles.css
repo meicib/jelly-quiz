@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Daydream";
+    src: url('fonts/Daydream.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "dogicapixel";
+    src: url('fonts/dogicapixel.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    cursor: url("assets/jellyfish-cursor.png"), auto;
+}
+
+body {
+    background-color: #010101;
+}
+
+#all-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    width: 100%;
+    height: 700px;
+
+    .overlay & {
+        background: linear-gradient(#b7d9f4, #010101);
+        border-color: white;
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    user-select: none;
+
+    opacity: var(--opacity, 0);
+
+    -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y), #010101 1%, transparent 50%);
+    mask: radial-gradient(25rem 25rem at var(--x) var(--y),#010101 1%, transparent 50%);
+}
+
+.container {
+    width: 40%;
+    text-align: center;
+}
+
+#main-page {
+    text-align: center; /* what the...... */
+}
+
+button {
+    font-family: "dogicapixel";
+    font-size: 13px;
+    cursor: inherit;
+    width: 50%;
+    height: 30px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 7px;
+    background-color: #7c9fc5;
+    transition: 400ms background-color ease;
+}
+
+p {
+    font-family: "dogicapixel";
+    font-size: 13px;
+    color: #b7d9f4;
+    text-align: center;
+    line-height: 1.3;
+}
+
+button:hover {
+    background-color: #284565;
+    color: #b7d9f4
+}
+
+#q-choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Daydream";
+    font-size: 20px;
+    color: #b7d9f4;
+    z-index: 1;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
