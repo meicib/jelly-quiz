@@ -25,9 +25,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #010101;
-    width: 100%;
-    height: 700px;
+    background: linear-gradient(#010101, #0d2644);
+    width: 100vw;
+    height: 100vh;
 
     .overlay & {
         background: linear-gradient(#b7d9f4, #010101);
@@ -44,8 +44,8 @@ body {
 
     opacity: var(--opacity, 0);
 
-    -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y), #010101 1%, transparent 50%);
-    mask: radial-gradient(25rem 25rem at var(--x) var(--y),#010101 1%, transparent 50%);
+    -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y), #010101 1%, transparent 70%);
+    mask: radial-gradient(25rem 25rem at var(--x) var(--y),#010101 1%, transparent 70%);
 }
 
 .container {
@@ -102,4 +102,431 @@ h1 {
 img {
     max-width: 200px;
     max-height: 200px;
+}
+
+.bubble {
+    --size: 1vw;
+    width: var(--size);
+    height: var(--size);
+    background: #b7d9f4;
+    border-radius: 50%;
+    position: absolute;
+    top: -5vh;
+}
+  
+@keyframes bubble-rise {
+    0% {
+        transform: translate3d(var(--left-end), 110vh, 0);
+    }
+    100% {
+        transform: translate3d(var(--left-ini), 0, 0);
+    }
+}
+  
+.bubble:nth-child(1) {
+    --size: 0.5vw;
+    --left-ini: -7vw;
+    --left-end: 10vw;
+    left: 45vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(2) {
+    --size: 0.1vw;
+    --left-ini: -2vw;
+    --left-end: 6vw;
+    left: 11vw;
+    animation: bubble-rise 8s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(3) {
+    --size: 0.3vw;
+    --left-ini: -9vw;
+    --left-end: 10vw;
+    left: 83vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(4) {
+    --size: 0.1vw;
+    --left-ini: 8vw;
+    --left-end: -6vw;
+    left: 60vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(5) {
+    --size: 0.5vw;
+    --left-ini: -3vw;
+    --left-end: -1vw;
+    left: 85vw;
+    animation: bubble-rise 7s linear infinite;
+    animation-delay: -4s;
+}
+.bubble:nth-child(6) {
+    --size: 0.5vw;
+    --left-ini: -1vw;
+    --left-end: 4vw;
+    left: 58vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(7) {
+    --size: 0.2vw;
+    --left-ini: -4vw;
+    --left-end: 9vw;
+    left: 40vw;
+    animation: bubble-rise 7s linear infinite;
+    animation-delay: -1s;
+}
+.bubble:nth-child(8) {
+    --size: 0.3vw;
+    --left-ini: -3vw;
+    --left-end: 6vw;
+    left: 53vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -10s;
+}
+.bubble:nth-child(9) {
+    --size: 0.2vw;
+    --left-ini: 8vw;
+    --left-end: -4vw;
+    left: 51vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -5s;
+}
+.bubble:nth-child(10) {
+    --size: 0.2vw;
+    --left-ini: -8vw;
+    --left-end: 10vw;
+    left: 27vw;
+    animation: bubble-rise 12s linear infinite;
+    animation-delay: -7s;
+}
+.bubble:nth-child(11) {
+    --size: 0.3vw;
+    --left-ini: -1vw;
+    --left-end: 10vw;
+    left: 58vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -7s;
+}
+.bubble:nth-child(12) {
+    --size: 0.5vw;
+    --left-ini: 1vw;
+    --left-end: 8vw;
+    left: 71vw;
+    animation: bubble-rise 11s linear infinite;
+    animation-delay: -6s;
+}
+.bubble:nth-child(13) {
+    --size: 0.3vw;
+    --left-ini: 7vw;
+    --left-end: -8vw;
+    left: 23vw;
+    animation: bubble-rise 14s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(14) {
+    --size: 0.5vw;
+    --left-ini: 2vw;
+    --left-end: -1vw;
+    left: 39vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(15) {
+    --size: 0.5vw;
+    --left-ini: 4vw;
+    --left-end: 0vw;
+    left: 42vw;
+    animation: bubble-rise 11s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(16) {
+    --size: 0.1vw;
+    --left-ini: 7vw;
+    --left-end: -9vw;
+    left: 34vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -5s;
+}
+.bubble:nth-child(17) {
+    --size: 0.4vw;
+    --left-ini: -8vw;
+    --left-end: 2vw;
+    left: 79vw;
+    animation: bubble-rise 15s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(18) {
+    --size: 0.1vw;
+    --left-ini: -5vw;
+    --left-end: 4vw;
+    left: 85vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(19) {
+    --size: 0.1vw;
+    --left-ini: 1vw;
+    --left-end: 0vw;
+    left: 90vw;
+    animation: bubble-rise 13s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(20) {
+    --size: 0.3vw;
+    --left-ini: 2vw;
+    --left-end: 9vw;
+    left: 73vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -10s;
+}
+.bubble:nth-child(21) {
+    --size: 0.5vw;
+    --left-ini: -4vw;
+    --left-end: 1vw;
+    left: 40vw;
+    animation: bubble-rise 12s linear infinite;
+    animation-delay: -7s;
+}
+.bubble:nth-child(22) {
+    --size: 0.3vw;
+    --left-ini: -8vw;
+    --left-end: 3vw;
+    left: 74vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -5s;
+}
+.bubble:nth-child(23) {
+    --size: 0.5vw;
+    --left-ini: 0vw;
+    --left-end: -1vw;
+    left: 73vw;
+    animation: bubble-rise 7s linear infinite;
+    animation-delay: -6s;
+}
+.bubble:nth-child(24) {
+    --size: 0.5vw;
+    --left-ini: -4vw;
+    --left-end: 9vw;
+    left: 62vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(25) {
+    --size: 0.3vw;
+    --left-ini: -2vw;
+    --left-end: 4vw;
+    left: 96vw;
+    animation: bubble-rise 14s linear infinite;
+    animation-delay: -1s;
+}
+.bubble:nth-child(26) {
+    --size: 0.4vw;
+    --left-ini: 1vw;
+    --left-end: -1vw;
+    left: 58vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(27) {
+    --size: 0.3vw;
+    --left-ini: -2vw;
+    --left-end: -2vw;
+    left: 58vw;
+    animation: bubble-rise 15s linear infinite;
+    animation-delay: -4s;
+}
+.bubble:nth-child(28) {
+    --size: 0.2vw;
+    --left-ini: 1vw;
+    --left-end: 5vw;
+    left: 84vw;
+    animation: bubble-rise 13s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(29) {
+    --size: 0.2vw;
+    --left-ini: -4vw;
+    --left-end: -4vw;
+    left: 49vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(30) {
+    --size: 0.2vw;
+    --left-ini: -9vw;
+    --left-end: -1vw;
+    left: 50vw;
+    animation: bubble-rise 7s linear infinite;
+    animation-delay: -5s;
+}
+.bubble:nth-child(31) {
+    --size: 0.1vw;
+    --left-ini: 10vw;
+    --left-end: 2vw;
+    left: 49vw;
+    animation: bubble-rise 12s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(32) {
+    --size: 0.2vw;
+    --left-ini: 4vw;
+    --left-end: 4vw;
+    left: 77vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -1s;
+}
+.bubble:nth-child(33) {
+    --size: 0.5vw;
+    --left-ini: -2vw;
+    --left-end: -9vw;
+    left: 77vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(34) {
+    --size: 0.4vw;
+    --left-ini: 9vw;
+    --left-end: 1vw;
+    left: 84vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -5s;
+}
+.bubble:nth-child(35) {
+    --size: 0.1vw;
+    --left-ini: 4vw;
+    --left-end: 10vw;
+    left: 94vw;
+    animation: bubble-rise 11s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(36) {
+    --size: 0.3vw;
+    --left-ini: -7vw;
+    --left-end: 10vw;
+    left: 84vw;
+    animation: bubble-rise 7s linear infinite;
+    animation-delay: -9s;
+}
+.bubble:nth-child(37) {
+    --size: 0.3vw;
+    --left-ini: 4vw;
+    --left-end: 3vw;
+    left: 64vw;
+    animation: bubble-rise 10s linear infinite;
+    animation-delay: -10s;
+}
+.bubble:nth-child(38) {
+    --size: 0.1vw;
+    --left-ini: 8vw;
+    --left-end: -1vw;
+    left: 50vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -9s;
+}
+.bubble:nth-child(39) {
+    --size: 0.5vw;
+    --left-ini: -4vw;
+    --left-end: -9vw;
+    left: 31vw;
+    animation: bubble-rise 14s linear infinite;
+    animation-delay: -1s;
+}
+.bubble:nth-child(40) {
+    --size: 0.4vw;
+    --left-ini: 2vw;
+    --left-end: -6vw;
+    left: 58vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(41) {
+    --size: 0.3vw;
+    --left-ini: 6vw;
+    --left-end: -2vw;
+    left: 23vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -6s;
+}
+.bubble:nth-child(42) {
+    --size: 0.3vw;
+    --left-ini: 4vw;
+    --left-end: 1vw;
+    left: 15vw;
+    animation: bubble-rise 12s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(43) {
+    --size: 0.5vw;
+    --left-ini: 4vw;
+    --left-end: -7vw;
+    left: 77vw;
+    animation: bubble-rise 11s linear infinite;
+    animation-delay: -8s;
+}
+.bubble:nth-child(44) {
+    --size: 0.5vw;
+    --left-ini: -2vw;
+    --left-end: 3vw;
+    left: 16vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -6s;
+}
+.bubble:nth-child(45) {
+    --size: 0.1vw;
+    --left-ini: 9vw;
+    --left-end: 0vw;
+    left: 62vw;
+    animation: bubble-rise 13s linear infinite;
+    animation-delay: -7s;
+}
+.bubble:nth-child(46) {
+    --size: 0.1vw;
+    --left-ini: -5vw;
+    --left-end: 10vw;
+    left: 47vw;
+    animation: bubble-rise 9s linear infinite;
+    animation-delay: -2s;
+}
+.bubble:nth-child(47) {
+    --size: 0.5vw;
+    --left-ini: 8vw;
+    --left-end: -5vw;
+    left: 25vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -9s;
+}
+.bubble:nth-child(48) {
+    --size: 0.2vw;
+    --left-ini: 0vw;
+    --left-end: -9vw;
+    left: 22vw;
+    animation: bubble-rise 12s linear infinite;
+    animation-delay: -3s;
+}
+.bubble:nth-child(49) {
+    --size: 0.4vw;
+    --left-ini: -4vw;
+    --left-end: 4vw;
+    left: 89vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -9s;
+}
+.bubble:nth-child(50) {
+    --size: 0.2vw;
+    --left-ini: 9vw;
+    --left-end: -3vw;
+    left: 79vw;
+    animation: bubble-rise 6s linear infinite;
+    animation-delay: -4s;
+}
+
+.bubble:nth-child(3n) {
+    filter: blur(2px);
+}
+.bubble:nth-child(1n) {
+    filter: blur(1px);
 }

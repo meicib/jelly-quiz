@@ -18,6 +18,15 @@ function quiz() {
         document.body.addEventListener("pointermove", applyOverlayMask);
     }
 
+    function bubble() {
+        const bubbleContainerEl = document.getElementById("bubble-container");
+        for (i = 0; i < 50; i++) {
+            const snowflakeEl = document.createElement("div");
+            snowflakeEl.classList.add("bubble");
+            bubbleContainerEl.appendChild(snowflakeEl);
+        }
+    }
+
     console.log("in quiz")
     const questions = [
         {
@@ -53,6 +62,7 @@ function quiz() {
 
     // begin quiz 
     glow();
+    bubble();
     document.getElementById("main-page").style.display = "block";
     document.getElementById("begin-quiz").addEventListener('click', function() {
         document.getElementById("main-page").style.display = "none";
