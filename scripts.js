@@ -25,6 +25,16 @@ function quiz() {
             snowflakeEl.classList.add("bubble");
             bubbleContainerEl.appendChild(snowflakeEl);
         }
+
+        // var bubbles = document.querySelectorAll(".bubble:nth-child(n)");
+
+        // for (i = 0; i < bubbles.length; i++) {
+        //     const randomSize = Math.random(5) * 0.1 * window.innerWidth;
+        //     bubbles[i].style.width = randomSize;
+        //     bubbles[i].style.height = randomSize;
+
+
+        // }
     }
 
     console.log("in quiz")
@@ -38,14 +48,14 @@ function quiz() {
         },
         {
             question: "question-2",
-            image: "assets/transparent-hyrax.webp",
+            image: "assets/transparent-elephant-shrew.webp",
             text: "Jellyfish are ancient, translucent creatures that drift gracefully through the ocean with their long, trailing tentacles. Despite their simple bodies—no brains or bones—they have survived for over 500 million years. Some even glow in the dark, adding a touch of eerie beauty to their mysterious presence.",
             choices: ["choice-1", "choice-2"],
             scores: [0, 0]
         },
         {
             question: "question-3",
-            image: "assets/transparent-hyrax.webp",
+            image: "assets/transparent-manatee.webp",
             text: "Jellyfish are ancient, translucent creatures that drift gracefully through the ocean with their long, trailing tentacles. Despite their simple bodies—no brains or bones—they have survived for over 500 million years. Some even glow in the dark, adding a touch of eerie beauty to their mysterious presence.",
             choices: ["choice-1", "choice-2"],
             scores: [0, 0]
