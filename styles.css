@@ -115,6 +115,7 @@ img {
 a {
     color: #b7d9f4;
     transition: 400ms background-color ease;
+    cursor: inherit;
 }
 
 a:hover {
