@@ -17,18 +17,20 @@ html {
 }
 
 body {
-    background-color: #010101;
+    background: linear-gradient(#010101, #0d2644);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #all-container {
+    flex: 1;
+    width: 100vw;
+    height: 120vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#010101, #0d2644);
-    width: 100vw;
-    height: 100vh;
-
     .overlay & {
         background: linear-gradient(#b7d9f4, #010101);
         border-color: white;
@@ -106,14 +108,22 @@ img {
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    left: 30vw;
     text-align: center;
+}
+
+a {
+    color: #b7d9f4;
+    transition: 400ms background-color ease;
+}
+
+a:hover {
+    color: #284565;
+    background-color: #b7d9f4
 }
 
 #creds {
     font-size: 10px;
+    line-height: 10px;
 }
 
 #toggle-style {
@@ -549,3 +559,8 @@ img {
 .bubble:nth-child(1n) {
     filter: blur(1px);
 }
+
+
+/* @media only screen and (max-width: 420px) {
+    
+  } */
