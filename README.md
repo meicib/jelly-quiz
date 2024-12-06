@@ -1,4 +1,4 @@
-Curious about which jellyfish you most align with? Take journey through a jellyfish kingdom and this quiz to find out!
+Curious about which jellyfish you most align with? Take a journey through a jellyfish kingdom in this quiz to find out!
 
 Current link at https://meicib.github.io/jelly-quiz
 
