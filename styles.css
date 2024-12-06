@@ -68,6 +68,7 @@ button {
     padding: 7px 7px;
     border: 2px solid;
     border-radius: 7px;
+    color: black;
     background-color: #7c9fc5;
     transition: 400ms background-color ease;
 }
