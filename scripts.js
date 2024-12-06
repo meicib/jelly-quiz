@@ -37,8 +37,6 @@ function quiz() {
                 styleButton.textContent = "simple display: off"
                 bubble()
             }
-            
-
         })
 
     }
@@ -226,12 +224,8 @@ function quiz() {
         displayCurrentQ();
     });
 
-    console.log("added event listener")
-
-
 
     function displayCurrentQ() {
-        console.log("currqnum is ", currQNum)
         const currQ = questions[currQNum];
         const questionEl = document.getElementById("q-question");
         const imgEl = document.getElementById("q-img");
@@ -261,15 +255,6 @@ function quiz() {
         for (let i = 0; i < choiceScoreArray.length; i++) {
             score[choiceScoreArray[i]] += 1;
         }
-
-        // if (currQNum + 1 < questions.length || currQNum + 2 < questions.length) {
-        //     nextq = questions[currQNum].next[choiceClicked];
-        //     console.log(nextq)
-        //     currQNum += nextq;
-        //     displayCurrentQ();
-        // } else {
-        //     endQuiz();
-        // }
 
         if (currQNum + 2 >= questions.length) {
             endQuiz();
