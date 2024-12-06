@@ -13,7 +13,7 @@
 }
 
 html {
-    cursor: url("assets/jellyfish-cursor.png"), auto;
+    cursor: url("assets/jellyfish-white.png"), auto;
 }
 
 body {
@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-    width: 40%;
+    width: 60%;
     text-align: center;
 }
 
@@ -61,10 +61,10 @@ button {
     font-family: "dogicapixel";
     font-size: 13px;
     cursor: inherit;
-    width: 50%;
-    height: 30px;
+    width: 70%;
+    height: fit-content;
+    padding: 7px 7px;
     border: 2px solid;
-    border-color: black;
     border-radius: 7px;
     background-color: #7c9fc5;
     transition: 400ms background-color ease;
@@ -89,6 +89,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     row-gap: 10px;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -100,8 +101,26 @@ h1 {
 }
 
 img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 180px;
+    max-height: 180;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 30vw;
+    text-align: center;
+}
+
+#creds {
+    font-size: 10px;
+}
+
+#toggle-style {
+    font-size: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 3px;
 }
 
 .bubble {
