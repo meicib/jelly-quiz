@@ -38,7 +38,7 @@ function quiz() {
                 bubble()
             }
         })
-
+        
     }
 
     const questions = [
