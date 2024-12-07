@@ -41,7 +41,6 @@ function quiz() {
 
     }
 
-    console.log("in quiz")
     const questions = [
         {
             question: "question 1",
@@ -74,7 +73,7 @@ function quiz() {
             text: "The water wraps around your limbs with no end in sight, just an endless void of darkness beyond the glow of the jellyfish. Soon, your view of the top of the tank is shrouded by a mass of jellyfish surrounding you.",
             choices: [
                 "You simply gaze at the whirling colors, appreciating its beauty.",
-                "Trying to see beyond the jellyfish, you to look for any gaps in the colors.",
+                "Trying to see beyond the jellyfish, you try to look for any gaps in the colors.",
                 "You let the jellyfish swarm around you, curious as to what they are doing.",
                 "Twirl around, creating a tornado of jellyfish with your movements."
             ],
@@ -200,6 +199,57 @@ function quiz() {
         }
     ]
 
+    const jellyinfo = {
+        "Fried Egg Jelly": {
+            traits: "Laidback, Easygoing, Go-with-the-flow",
+            habitat: "You enjoy living in shallow sea depths, letting the waves of the seas propel you. A favorite activity of yours is letting the sun, shining through the crystalline water, warm your body.",
+            compatible: "Black Sea Nettle, Spotted Jelly, Moon Jelly",
+            incompatible: "Man-O-War, Elegant Jelly"
+        },
+        "Man-O-War": {
+            traits: "Assertive, Tough, Adamant",
+            habitat: "You enjoy traversing through the surface of the sea or beaches, never afraid to battle strong waves or the hands of curious humans. Maybe you should work on alleviating your painful sting!",
+            compatible: "Elegant Jelly, Black Sea Nettle",
+            incompatible: "Flower Hat Jelly, Moon Jelly"
+        },
+        "Black Sea Nettle": {
+            traits: "Outgoing, Playful, Goofy",
+            habitat: "You live in coastal waters, enjoying the liveliness of the teeming habitats. An ordinary day consists of cheerfully greeting crabs, manta rays, sardines, sea lions, and all the other friends you’ve made!",
+            compatible: "Flower Hat Jelly, Fried Egg Jelly, Moon Jelly",
+            incompatible: "Box Jelly, Elegant Jelly"
+        },
+        "Flower Hat Jelly": {
+            traits: "Eye-catching, Whimsical, Quirky",
+            habitat: "You live near the ocean floor, your sprightly personality and striking looks standing out in the darkness. This stark difference causes some others to consider you odd, but your friends find that charm endearing.",
+            compatible: "Elegant Jelly, Box Jelly, Black Sea Nettle",
+            incompatible: "Man-O-War, Fried Egg Jelly"
+        },
+        "Spotted Jelly": {
+            traits: "Dependable, Caring, Trustworthy",
+            habitat: "You live in bays, harbors and lagoons. Despite the hecticness of your life, living so close to land, others find that you’re a steady constant in their life, providing comfort in times of need.",
+            compatible: "Box Jelly, Moon Jelly, Man-O-War",
+            incompatible: "Elegant Jelly"
+        },
+        "Moon Jelly": {
+            traits: "Quiet, Introspective, Peaceful",
+            habitat: "You live in temperate seas, preferring consistent currents. This consistency allows for you to look inward, often lost in your own mind as the currents push you through the water, cradling you gently.",
+            compatible: "Spotted Jelly, Elegant Jelly, Box Jelly",
+            incompatible: "Man-O-War, Flower Hat Jelly"
+        },
+        "Elegant Jelly": {
+            traits: "Mysterious, Unknown, Misunderstood",
+            habitat: "You live in various marine environments. Many find you hard to decipher, your anonymity causing some to mistrust you. Those who have managed to get close to you know that you simply enjoy your privacy.",
+            compatible: "Moon Jelly, Flower Hat Jelly, Fried Egg Jelly",
+            incompatible: "Black Sea Nettle, Spotted Jelly"
+        },
+        "Box Jelly": {
+            traits: "Strategic, Serious, Focused",
+            habitat: "You prefer warm, tropical waters, using your sharp mind to propel you through labyrinths of coral reefs and sea life as you swim towards your goal. Some may call you single-minded, others say determined.",
+            compatible: "Man-O-War, Moon Jelly, Spotted Jelly",
+            incompatible: "Fried Egg Jelly, Black Sea Nettle"
+        }
+    };
+
 
     let currQNum = 0;
     let score = {
@@ -260,7 +310,6 @@ function quiz() {
             endQuiz();
         } else {
             nextq = questions[currQNum].next[choiceClicked];
-            console.log(nextq)
             currQNum += nextq;
             displayCurrentQ();
         }
@@ -273,12 +322,16 @@ function quiz() {
         let highestscore = 0;
         for (const jelly in score) {
             console.log(jelly)
-            if (score[jelly] > highestscore) {
+            if (score[jelly] >= highestscore) {
                 highestscore = score[jelly];
                 resultjelly = jelly;
             }
         }
-        document.getElementById("jelly").textContent = "You are a " + `${resultjelly}` + "!"
+        document.getElementById("jelly").textContent = "You are a " + `${resultjelly}` + "!";
+        document.getElementById("traits").textContent = "Traits: " + jellyinfo[resultjelly].traits;
+        document.getElementById("habitat").textContent = jellyinfo[resultjelly].habitat;
+        document.getElementById("compatible").textContent = "You're most compatible with " + jellyinfo[resultjelly].compatible;
+        document.getElementById("incompatible").textContent = "and don't pair well with " + jellyinfo[resultjelly].incompatible;
         document.getElementById("results-page").style.display = "block";
     }
 }
