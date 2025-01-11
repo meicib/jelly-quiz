@@ -109,11 +109,6 @@ h1 {
     z-index: 1;
 }
 
-img {
-    max-width: 180px;
-    max-height: 180;
-}
-
 #footer {
     text-align: center;
 }
@@ -138,6 +133,11 @@ a:hover {
     width: fit-content;
     height: fit-content;
     padding: 3px 3px;
+}
+
+img {
+    width: 300px;
+    height: auto;
 }
 
 .bubble {
