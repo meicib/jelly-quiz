@@ -166,7 +166,7 @@ function quiz() {
                 "Wiggle your limbs. Do they feel like tendrils, or hands and fingers?",
                 "Keep your eyes shut for a little longer, hoping that the feeling of being a jellyfish doesn’t leave you so soon.",
                 "Immediately sit up and peer down at yourself, patting down your body to make sure it’s real.",
-                "Immediately glance around, noticing the large aquarium tanks and, most glaringly, the lack of water all around you."
+                "You look around, noticing the large aquarium tanks and, most glaringly, the lack of water all around you."
             ],
             scores: [["Box Jelly", "Moon Jelly"], ["Flower Hat Jelly", "Elegant Jelly"], ["Fried Egg Jelly", "Man-O-War"], ["Black Sea Nettle", "Spotted Jelly"]],
             next: [1, 1, 2, 2]
